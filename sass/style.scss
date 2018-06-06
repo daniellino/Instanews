@@ -37,6 +37,7 @@ body {
     align-items: center;
     position: relative;
     height: 100vh;
+    margin-bottom: 2rem;
     .header-and-select {
         display: flex;
         flex-flow: column wrap;
@@ -44,13 +45,18 @@ body {
         h3 {
             margin: $margin;
             font-size: 1.2rem;
+            @include desktop {
+                width: 10rem;
+            }
         }
     }
     @include tablet {
         flex-flow: initial;
     }
     @include desktop {
-        margin-right: 45rem;
+        margin-right: 37rem;
+        width: 12rem;
+        flex: auto;
     }
 }
 
@@ -66,9 +72,7 @@ body {
         flex-flow: row wrap;
         // padding-right: 60vh;
     }
-    // @include desktop {
-    //     padding-right: 300vh;
-    // }
+    // @include desktop {}
 }
 
 .listed-news {

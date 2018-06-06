@@ -215,7 +215,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  height: 100vh; }
+  height: 100vh;
+  margin-bottom: 2rem; }
   .header-logo .header-and-select {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -230,6 +231,9 @@ body {
     .header-logo .header-and-select h3 {
       margin: 1rem;
       font-size: 1.2rem; }
+      @media (min-width: 1000px) {
+        .header-logo .header-and-select h3 {
+          width: 10rem; } }
   @media (min-width: 600px) {
     .header-logo {
       -webkit-box-orient: vertical;
@@ -238,7 +242,11 @@ body {
               flex-flow: initial; } }
   @media (min-width: 1000px) {
     .header-logo {
-      margin-right: 45rem; } }
+      margin-right: 37rem;
+      width: 12rem;
+      -webkit-box-flex: 1;
+          -ms-flex: auto;
+              flex: auto; } }
 
 .small-logo {
   height: 5rem; }
