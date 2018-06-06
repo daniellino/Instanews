@@ -2,7 +2,7 @@ $(function() { //shorter form for document ready
 
     $('#options').on('change', function(event) {
 
-            $('container').append("<img id = 'loadimg' src='images/ajax-loader.gif'/>");
+            $('.loader').append("<img id='loadimg' src='images/ajax-loader.gif'/>");
 
 
             event.preventDefault();
@@ -40,7 +40,7 @@ $(function() { //shorter form for document ready
 
 
             }).always(function() {
-                $('.loader').remove("#loadimg");
+                $('#loadimg').remove();
             })
         }) //end of changing select event
 }); //end of document ready
