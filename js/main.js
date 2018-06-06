@@ -2,7 +2,7 @@ $(function() { //shorter form for document ready
 
     $('#options').on('change', function(event) {
 
-            $('.loader').before('<img src="images/ajax-loader.gif" id="loader" alt="ajax-loader"/>');
+            $('.loader').append('<img src="images/ajax-loader.gif" id="loader" alt="ajax-loader"/>');
 
 
             event.preventDefault();
@@ -36,7 +36,7 @@ $(function() { //shorter form for document ready
 
 
             }).fail(function() {
-                $('.news').append('<li>Something went wrong!</li>');
+                $('.news').append(newsDisplayed);
 
 
             }).always(function() {

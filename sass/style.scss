@@ -2,4 +2,154 @@
 @import './partials/mixin';
 @import './partials/reset';
 @import './partials/fonts';
-@import './partials/main-style';
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    color: #ffffff;
+    font-family: "Open Sans", Times, serif;
+    font-style: normal;
+    font-weight: 100;
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    @include desktop {
+        flex-flow: row wrap;
+        align-items: initial;
+    }
+    @include tablet {
+        flex-flow: row wrap;
+        align-items: initial;
+    }
+}
+
+.header-logo {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    .header-and-select {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        h3 {
+            margin: $margin;
+            font-size: 1.2rem;
+        }
+    }
+    @include tablet {
+        flex-flow: initial;
+    }
+    @include desktop {
+        margin-right: 45rem;
+    }
+}
+
+.small-logo {
+    height: 5rem;
+}
+
+.logo-size {
+    height: 20rem;
+    @include tablet {
+        height: 10rem;
+        display: flex;
+        flex-flow: row wrap;
+        // padding-right: 60vh;
+    }
+    // @include desktop {
+    //     padding-right: 300vh;
+    // }
+}
+
+.listed-news {
+    height: 25rem;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    @include tablet {
+        height: 25rem;
+        width: 33.333%;
+        &:hover {
+            .abstract {
+                bottom: 0;
+            }
+        }
+    }
+    @include desktop {
+        height: 30rem;
+        width: 25%;
+        &:hover {
+            .abstract {
+                bottom: 0;
+            }
+        }
+    }
+    img {
+        height: 100%;
+        @include tablet {
+            position: absolute;
+            transform: translate(-20%, 0%);
+        }
+        @include desktop {
+            position: absolute;
+        }
+    }
+    div {
+        display: flex;
+        flex-flow: column-reverse wrap;
+    }
+}
+
+#options {
+    font-size: 1.1rem;
+}
+
+.abstract {
+    bottom: 0px;
+    display: inline;
+    font-size: 1rem;
+    position: absolute;
+    padding: .8rem .5rem;
+    line-height: 1.5rem;
+    transition: all .7s ease-in-out .03s;
+    background: -moz-linear-gradient(top, rgba(122, 133, 153, 0.48) 0%, rgba(74, 102, 155, 0.53) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(122, 133, 153, 0.48) 0%, rgba(74, 102, 155, 0.53) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(122, 133, 153, 0.48) 0%, rgba(74, 102, 155, 0.53) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    @include tablet {
+        bottom: -200px;
+        transition: all .7s ease-in-out .03s;
+    }
+    @include desktop {
+        bottom: -200px;
+        transition: all .7s ease-in-out .03s;
+    }
+}
+
+#loader {
+    height: 3rem;
+    padding: 3rem 10rem;
+}
+
+footer p {
+    color: $footer-font-color;
+    margin: 2rem 0 2rem 4rem;
+    text-align: left;
+    width: 100%
+}
+
+.copyright span {
+    text-transform: uppercase;
+}

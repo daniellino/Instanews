@@ -8,10 +8,20 @@ var gulp = require('gulp'),
     sass = require("gulp-sass"),
     autoprefixer = require("gulp-autoprefixer"),
     cssnano = require("gulp-cssnano"),
-    rename = require("gulp-rename");
+    rename = require("gulp-rename"),
+    babel = require("gulp-babel");
 // This is a very basic Gulp task,
 // with a name and some code to run
 // when this task is called:
+
+gulp.task("babel", () => {
+    return gulp
+        .src("js/main.js")
+
+
+    .pipe(gulp.dest("build/js/babel.js"));
+});
+
 
 gulp.task('lint', function() { //gulp task for lint
 
@@ -40,6 +50,9 @@ gulp.task("sass", function() { //gulp task for compiling sass files to css files
 gulp.task("scripts", gulp.series('lint', function() { //gulp task for compiling sass files to css files
     return gulp
         .src("./js/*.js")
+        .pipe(babel({
+            presets: ['env']
+        }))
         .pipe(uglify())
         .pipe(rename({ extname: ".min.js" })) //adding extension to the name of the file
         .pipe(gulp.dest("./build/js"));

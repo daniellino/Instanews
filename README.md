@@ -27,7 +27,7 @@ A responsive website for mobile and tablet and desktop sizes using mobile first 
 
 ## Built With
 
-* [JQuary](https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js) - JQuary CDN link
+* [JQuery](https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js) - JQuary CDN link
 * NewYork Times Top Stories API data in JSON format
 
 ## Learnings
