@@ -346,3 +346,9 @@ footer p {
 
 .copyright span {
   text-transform: uppercase; }
+
+#loadimg {
+  width: 8%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
