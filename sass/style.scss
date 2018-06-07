@@ -16,14 +16,11 @@ body {
 }
 
 .container {
+    //styling the main container
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    @include desktop {
-        flex-flow: row wrap;
-        align-items: initial;
-    }
     @include tablet {
         flex-flow: row wrap;
         align-items: initial;
@@ -31,6 +28,7 @@ body {
 }
 
 .header-logo {
+    //styling header
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -108,10 +106,6 @@ body {
         object-fit: cover;
         width: 480px;
         height: 480px;
-        // @include tablet {
-        //     position: absolute;
-        //     transform: translate(-20%, 0%);
-        // }
     }
     div {
         display: flex;
@@ -125,6 +119,7 @@ body {
 }
 
 .abstract {
+    //styling abstract
     bottom: 0px;
     display: inline;
     font-size: 1rem;
