@@ -42,9 +42,12 @@ body {
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
+        margin-left: 3rem;
+        margin-top: 1rem;
         h3 {
-            margin: $margin;
-            font-size: 1.2rem;
+            margin-left: 0;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
             @include desktop {
                 width: 10rem;
             }
@@ -102,14 +105,13 @@ body {
         }
     }
     img {
-        height: 100%;
-        @include tablet {
-            position: absolute;
-            transform: translate(-20%, 0%);
-        }
-        @include desktop {
-            position: absolute;
-        }
+        object-fit: cover;
+        width: 480px;
+        height: 480px;
+        // @include tablet {
+        //     position: absolute;
+        //     transform: translate(-20%, 0%);
+        // }
     }
     div {
         display: flex;
@@ -119,6 +121,7 @@ body {
 
 #options {
     font-size: 1.1rem;
+    width: 130px;
 }
 
 .abstract {
