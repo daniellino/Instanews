@@ -1,6 +1,6 @@
 # Project 2: Instanews
 
-## Aabout the project
+## About the project
 
 This is the second project at RED Academy.
 
